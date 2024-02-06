@@ -1,25 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.11.1 on win32)" generated="2024-02-06T18:13:31.875775" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.11.1 on win32)" generated="2024-02-06T18:20:36.403838" rpa="false" schemaversion="5">
 <suite id="s1" name="Iqs-Logica" source="C:\Users\silviaz\OneDrive\Documentos\iqs-logica">
-<suite id="s1-s1" name="Exercicio5" source="C:\Users\silviaz\OneDrive\Documentos\iqs-logica\exercicio5.robot">
-<test id="s1-s1-t1" name="exercicio5" line="17">
+<suite id="s1-s1" name="Exercicio7" source="C:\Users\silviaz\OneDrive\Documentos\iqs-logica\exercicio7.robot">
+<test id="s1-s1-t1" name="exercicio7" line="10">
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2024-02-06T18:13:31.921071" level="INFO">${salario_anual} = 23600</msg>
-<var>${salario_anual}</var>
-<arg>(${HORAS_NORMAIS}*${VALOR_HORA_NORMAL}+${HORAS_EXTRAS}*${VALOR_HORA_EXTRA})</arg>
+<msg time="2024-02-06T18:20:36.450448" level="INFO">${quociente} = 6.666666666666667</msg>
+<var>${quociente}</var>
+<arg>${DIVIDENDO}/${DIVISOR}</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2024-02-06T18:13:31.921071" elapsed="0.001010"/>
+<status status="PASS" start="2024-02-06T18:20:36.450448" elapsed="0.000999"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-02-06T18:20:36.453450" level="INFO">${resto} = 2</msg>
+<var>${resto}</var>
+<arg>${DIVIDENDO}%${DIVISOR}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-02-06T18:20:36.452453" elapsed="0.001993"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
-<arg>Seu salario anual é de: ${salario_anual}</arg>
+<arg>"${DIVIDENDO}" "${DIVISOR}" "${quociente}" "${resto}"</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-02-06T18:13:31.923078" elapsed="0.000999"/>
+<status status="PASS" start="2024-02-06T18:20:36.454446" elapsed="0.001000"/>
 </kw>
-<status status="PASS" start="2024-02-06T18:13:31.919560" elapsed="0.005523"/>
+<status status="PASS" start="2024-02-06T18:20:36.448447" elapsed="0.008000"/>
 </test>
-<status status="PASS" start="2024-02-06T18:13:31.912034" elapsed="0.014042"/>
+<status status="PASS" start="2024-02-06T18:20:36.444621" elapsed="0.015388"/>
 </suite>
-<status status="PASS" start="2024-02-06T18:13:31.879494" elapsed="0.051099"/>
+<status status="PASS" start="2024-02-06T18:20:36.408445" elapsed="0.054564"/>
 </suite>
 <statistics>
 <total>
@@ -29,7 +36,7 @@
 </tag>
 <suite>
 <stat pass="1" fail="0" skip="0" id="s1" name="Iqs-Logica">Iqs-Logica</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1" name="Exercicio5">Iqs-Logica.Exercicio5</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Exercicio7">Iqs-Logica.Exercicio7</stat>
 </suite>
 </statistics>
 <errors>
