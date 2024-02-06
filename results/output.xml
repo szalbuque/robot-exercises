@@ -1,76 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.11.1 on win32)" generated="2024-02-06T17:26:09.303869" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.11.1 on win32)" generated="2024-02-06T17:45:16.762607" rpa="false" schemaversion="5">
 <suite id="s1" name="Iqs-Logica" source="C:\Users\silviaz\OneDrive\Documentos\iqs-logica">
-<suite id="s1-s1" name="Exercicio20" source="C:\Users\silviaz\OneDrive\Documentos\iqs-logica\exercicio20.robot">
-<test id="s1-s1-t1" name="exercicio 20" line="9">
+<suite id="s1-s1" name="Exercicio2" source="C:\Users\silviaz\OneDrive\Documentos\iqs-logica\exercicio2.robot">
+<test id="s1-s1-t1" name="exercicio2" line="8">
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2024-02-06T17:26:09.346208" level="INFO">${imc} = 44.0771349862259</msg>
-<var>${imc}</var>
-<arg>${PESO} / (${ALTURA} * ${ALTURA})</arg>
+<msg time="2024-02-06T17:45:16.829661" level="INFO">${antecessor} = 3</msg>
+<var>${antecessor}</var>
+<arg>${NUMERO}-1</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2024-02-06T17:26:09.345209" elapsed="0.002001"/>
+<status status="PASS" start="2024-02-06T17:45:16.828651" elapsed="0.002011"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-02-06T17:45:16.835670" level="INFO">${sucessor} = 5</msg>
+<var>${sucessor}</var>
+<arg>${NUMERO}+1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-02-06T17:45:16.834670" elapsed="0.001999"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
-<arg>${imc}</arg>
+<arg>Antecessor ${antecessor}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-02-06T17:26:09.348207" elapsed="0.000000"/>
+<status status="PASS" start="2024-02-06T17:45:16.837670" elapsed="0.001000"/>
 </kw>
-<if>
-<branch type="IF" condition="${imc}&lt;18.5">
 <kw name="Log To Console" owner="BuiltIn">
-<arg>Abaixo do peso normal</arg>
+<arg>Sucessor ${sucessor}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" start="2024-02-06T17:26:09.349713" elapsed="0.000000"/>
+<status status="PASS" start="2024-02-06T17:45:16.839174" elapsed="0.000504"/>
 </kw>
-<status status="NOT RUN" start="2024-02-06T17:26:09.349713" elapsed="0.000000"/>
-</branch>
-<branch type="ELSE IF" condition="${imc}&gt;=18.5 and ${imc}&lt;=24.9">
-<kw name="Log To Console" owner="BuiltIn">
-<arg>Peso normal</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" start="2024-02-06T17:26:09.350724" elapsed="0.000000"/>
-</kw>
-<status status="NOT RUN" start="2024-02-06T17:26:09.350724" elapsed="0.000000"/>
-</branch>
-<branch type="ELSE IF" condition="${imc}&gt;=25 and ${imc}&lt;=29.9">
-<kw name="Log To Console" owner="BuiltIn">
-<arg>Excesso de Peso</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" start="2024-02-06T17:26:09.350724" elapsed="0.000000"/>
-</kw>
-<status status="NOT RUN" start="2024-02-06T17:26:09.350724" elapsed="0.000000"/>
-</branch>
-<branch type="ELSE IF" condition="${imc}&gt;=30 and ${imc}&lt;=34.9">
-<kw name="Log To Console" owner="BuiltIn">
-<arg>Obesidade classe I</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" start="2024-02-06T17:26:09.351721" elapsed="0.000000"/>
-</kw>
-<status status="NOT RUN" start="2024-02-06T17:26:09.350724" elapsed="0.000997"/>
-</branch>
-<branch type="ELSE IF" condition="${imc}&gt;=35 and ${imc}&lt;=39.9">
-<kw name="Log To Console" owner="BuiltIn">
-<arg>Obesidade classe II</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" start="2024-02-06T17:26:09.351721" elapsed="0.000000"/>
-</kw>
-<status status="NOT RUN" start="2024-02-06T17:26:09.351721" elapsed="0.000000"/>
-</branch>
-<branch type="ELSE IF" condition="${imc}&gt;=40">
-<kw name="Log To Console" owner="BuiltIn">
-<arg>Obesidade classe III</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-02-06T17:26:09.351721" elapsed="0.001111"/>
-</kw>
-<status status="PASS" start="2024-02-06T17:26:09.351721" elapsed="0.001111"/>
-</branch>
-<status status="PASS" start="2024-02-06T17:26:09.349713" elapsed="0.003119"/>
-</if>
-<status status="PASS" start="2024-02-06T17:26:09.343210" elapsed="0.009622"/>
+<status status="PASS" start="2024-02-06T17:45:16.822265" elapsed="0.017413"/>
 </test>
-<status status="PASS" start="2024-02-06T17:26:09.337689" elapsed="0.016152"/>
+<status status="PASS" start="2024-02-06T17:45:16.814239" elapsed="0.032448"/>
 </suite>
-<status status="PASS" start="2024-02-06T17:26:09.308647" elapsed="0.054234"/>
+<status status="PASS" start="2024-02-06T17:45:16.768531" elapsed="0.080662"/>
 </suite>
 <statistics>
 <total>
@@ -80,7 +41,7 @@
 </tag>
 <suite>
 <stat pass="1" fail="0" skip="0" id="s1" name="Iqs-Logica">Iqs-Logica</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1" name="Exercicio20">Iqs-Logica.Exercicio20</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Exercicio2">Iqs-Logica.Exercicio2</stat>
 </suite>
 </statistics>
 <errors>
