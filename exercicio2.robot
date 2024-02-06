@@ -1,0 +1,1 @@
+#Construir um algoritmo que a partir de um número informado exiba na tela o seu sucessor e antecessor. 
