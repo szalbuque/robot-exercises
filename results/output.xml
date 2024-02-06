@@ -1,40 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.11.1 on win32)" generated="2024-02-06T19:40:17.623958" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.11.1 on win32)" generated="2024-02-06T19:57:08.032845" rpa="false" schemaversion="5">
 <suite id="s1" name="Iqs-Logica" source="C:\Users\silviaz\OneDrive\Documentos\iqs-logica">
-<suite id="s1-s1" name="Exercicio11" source="C:\Users\silviaz\OneDrive\Documentos\iqs-logica\exercicio11.robot">
-<test id="s1-s1-t1" name="exercicio11" line="8">
+<suite id="s1-s1" name="Exercicio12" source="C:\Users\silviaz\OneDrive\Documentos\iqs-logica\exercicio12.robot">
+<test id="s1-s1-t1" name="exercicio3" line="11">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Média das notas da ${NOME} em ${DISCIPLINA}:</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-02-06T19:57:08.092384" elapsed="0.003084"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-02-06T19:57:08.100469" level="INFO">${media} = 8.5</msg>
+<var>${media}</var>
+<arg>(${NOTAS}[0]+${NOTAS}[1]+${NOTAS}[2]+${NOTAS}[3])/4</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-02-06T19:57:08.097472" elapsed="0.002997"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${media}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-02-06T19:57:08.101976" elapsed="0.001026"/>
+</kw>
 <if>
-<branch type="IF" condition="${NUMERO}==0">
+<branch type="IF" condition="${media}&gt;7">
 <kw name="Log To Console" owner="BuiltIn">
-<arg>Zero</arg>
+<arg>Aprovado</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" start="2024-02-06T19:40:17.678491" elapsed="0.001008"/>
+<status status="PASS" start="2024-02-06T19:57:08.104002" elapsed="0.001001"/>
 </kw>
-<status status="NOT RUN" start="2024-02-06T19:40:17.678491" elapsed="0.001008"/>
-</branch>
-<branch type="ELSE IF" condition="${NUMERO}&lt;0">
-<kw name="Log To Console" owner="BuiltIn">
-<arg>Negativo</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-02-06T19:40:17.679499" elapsed="0.001000"/>
-</kw>
-<status status="PASS" start="2024-02-06T19:40:17.679499" elapsed="0.001000"/>
+<status status="PASS" start="2024-02-06T19:57:08.103002" elapsed="0.002001"/>
 </branch>
 <branch type="ELSE">
 <kw name="Log To Console" owner="BuiltIn">
-<arg>Positivo</arg>
+<arg>Reprovado</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" start="2024-02-06T19:40:17.680499" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-02-06T19:57:08.105003" elapsed="0.000000"/>
 </kw>
-<status status="NOT RUN" start="2024-02-06T19:40:17.680499" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-02-06T19:57:08.105003" elapsed="0.000000"/>
 </branch>
-<status status="PASS" start="2024-02-06T19:40:17.678491" elapsed="0.002008"/>
+<status status="PASS" start="2024-02-06T19:57:08.103002" elapsed="0.005003"/>
 </if>
-<status status="PASS" start="2024-02-06T19:40:17.677206" elapsed="0.003293"/>
+<status status="PASS" start="2024-02-06T19:57:08.087876" elapsed="0.026197"/>
 </test>
-<status status="PASS" start="2024-02-06T19:40:17.672351" elapsed="0.014912"/>
+<status status="PASS" start="2024-02-06T19:57:08.082876" elapsed="0.038204"/>
 </suite>
-<status status="PASS" start="2024-02-06T19:40:17.631248" elapsed="0.058024"/>
+<status status="PASS" start="2024-02-06T19:57:08.038116" elapsed="0.089941"/>
 </suite>
 <statistics>
 <total>
@@ -44,7 +53,7 @@
 </tag>
 <suite>
 <stat pass="1" fail="0" skip="0" id="s1" name="Iqs-Logica">Iqs-Logica</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1" name="Exercicio11">Iqs-Logica.Exercicio11</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Exercicio12">Iqs-Logica.Exercicio12</stat>
 </suite>
 </statistics>
 <errors>
