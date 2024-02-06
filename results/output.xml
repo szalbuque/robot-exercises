@@ -1,30 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.11.1 on win32)" generated="2024-02-06T18:02:41.209293" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.11.1 on win32)" generated="2024-02-06T18:07:31.001078" rpa="false" schemaversion="5">
 <suite id="s1" name="Iqs-Logica" source="C:\Users\silviaz\OneDrive\Documentos\iqs-logica">
-<suite id="s1-s1" name="Exercicio3" source="C:\Users\silviaz\OneDrive\Documentos\iqs-logica\exercicio3.robot">
-<test id="s1-s1-t1" name="exercicio3" line="11">
-<kw name="Log To Console" owner="BuiltIn">
-<arg>Média das notas da ${NOME} em ${DISCIPLINA}:</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-02-06T18:02:41.256464" elapsed="0.001510"/>
-</kw>
+<suite id="s1-s1" name="Exercicio4" source="C:\Users\silviaz\OneDrive\Documentos\iqs-logica\exercicio4.robot">
+<test id="s1-s1-t1" name="exercicio4" line="11">
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2024-02-06T18:02:41.258982" level="INFO">${media} = 8.5</msg>
-<var>${media}</var>
-<arg>(${NOTAS}[0]+${NOTAS}[1]+${NOTAS}[2]+${NOTAS}[3])/4</arg>
+<msg time="2024-02-06T18:07:31.051358" level="INFO">${resultado} = 67</msg>
+<var>${resultado}</var>
+<arg>${ANO_FUTURO} - ${ANO_NASCIMENTO}</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2024-02-06T18:02:41.258982" elapsed="0.001002"/>
+<status status="PASS" start="2024-02-06T18:07:31.051358" elapsed="0.001240"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
-<arg>${media}</arg>
+<arg>Em ${ANO_FUTURO} terei ${resultado} anos de idade!</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-02-06T18:02:41.261986" elapsed="0.001256"/>
+<status status="PASS" start="2024-02-06T18:07:31.061132" elapsed="0.001999"/>
 </kw>
-<status status="PASS" start="2024-02-06T18:02:41.255464" elapsed="0.007778"/>
+<status status="PASS" start="2024-02-06T18:07:31.049351" elapsed="0.014780"/>
 </test>
-<status status="PASS" start="2024-02-06T18:02:41.250596" elapsed="0.015658"/>
+<status status="PASS" start="2024-02-06T18:07:31.044748" elapsed="0.021384"/>
 </suite>
-<status status="PASS" start="2024-02-06T18:02:41.213301" elapsed="0.056464"/>
+<status status="PASS" start="2024-02-06T18:07:31.006086" elapsed="0.066667"/>
 </suite>
 <statistics>
 <total>
@@ -34,7 +29,7 @@
 </tag>
 <suite>
 <stat pass="1" fail="0" skip="0" id="s1" name="Iqs-Logica">Iqs-Logica</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1" name="Exercicio3">Iqs-Logica.Exercicio3</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Exercicio4">Iqs-Logica.Exercicio4</stat>
 </suite>
 </statistics>
 <errors>
