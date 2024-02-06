@@ -1,37 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.11.1 on win32)" generated="2024-02-06T17:45:16.762607" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.11.1 on win32)" generated="2024-02-06T18:02:41.209293" rpa="false" schemaversion="5">
 <suite id="s1" name="Iqs-Logica" source="C:\Users\silviaz\OneDrive\Documentos\iqs-logica">
-<suite id="s1-s1" name="Exercicio2" source="C:\Users\silviaz\OneDrive\Documentos\iqs-logica\exercicio2.robot">
-<test id="s1-s1-t1" name="exercicio2" line="8">
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2024-02-06T17:45:16.829661" level="INFO">${antecessor} = 3</msg>
-<var>${antecessor}</var>
-<arg>${NUMERO}-1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2024-02-06T17:45:16.828651" elapsed="0.002011"/>
+<suite id="s1-s1" name="Exercicio3" source="C:\Users\silviaz\OneDrive\Documentos\iqs-logica\exercicio3.robot">
+<test id="s1-s1-t1" name="exercicio3" line="11">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Média das notas da ${NOME} em ${DISCIPLINA}:</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-02-06T18:02:41.256464" elapsed="0.001510"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2024-02-06T17:45:16.835670" level="INFO">${sucessor} = 5</msg>
-<var>${sucessor}</var>
-<arg>${NUMERO}+1</arg>
+<msg time="2024-02-06T18:02:41.258982" level="INFO">${media} = 8.5</msg>
+<var>${media}</var>
+<arg>(${NOTAS}[0]+${NOTAS}[1]+${NOTAS}[2]+${NOTAS}[3])/4</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2024-02-06T17:45:16.834670" elapsed="0.001999"/>
+<status status="PASS" start="2024-02-06T18:02:41.258982" elapsed="0.001002"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
-<arg>Antecessor ${antecessor}</arg>
+<arg>${media}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-02-06T17:45:16.837670" elapsed="0.001000"/>
+<status status="PASS" start="2024-02-06T18:02:41.261986" elapsed="0.001256"/>
 </kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>Sucessor ${sucessor}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-02-06T17:45:16.839174" elapsed="0.000504"/>
-</kw>
-<status status="PASS" start="2024-02-06T17:45:16.822265" elapsed="0.017413"/>
+<status status="PASS" start="2024-02-06T18:02:41.255464" elapsed="0.007778"/>
 </test>
-<status status="PASS" start="2024-02-06T17:45:16.814239" elapsed="0.032448"/>
+<status status="PASS" start="2024-02-06T18:02:41.250596" elapsed="0.015658"/>
 </suite>
-<status status="PASS" start="2024-02-06T17:45:16.768531" elapsed="0.080662"/>
+<status status="PASS" start="2024-02-06T18:02:41.213301" elapsed="0.056464"/>
 </suite>
 <statistics>
 <total>
@@ -41,7 +34,7 @@
 </tag>
 <suite>
 <stat pass="1" fail="0" skip="0" id="s1" name="Iqs-Logica">Iqs-Logica</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1" name="Exercicio2">Iqs-Logica.Exercicio2</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Exercicio3">Iqs-Logica.Exercicio3</stat>
 </suite>
 </statistics>
 <errors>
