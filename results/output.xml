@@ -1,40 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.11.1 on win32)" generated="2024-02-06T20:05:31.873264" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.11.1 on win32)" generated="2024-02-06T20:16:27.244106" rpa="false" schemaversion="5">
 <suite id="s1" name="Iqs-Logica" source="C:\Users\silviaz\OneDrive\Documentos\iqs-logica">
-<suite id="s1-s1" name="Exercicio21" source="C:\Users\silviaz\OneDrive\Documentos\iqs-logica\exercicio21.robot">
-<test id="s1-s1-t1" name="exercicio21" line="11">
+<suite id="s1-s1" name="Exercicio14" source="C:\Users\silviaz\OneDrive\Documentos\iqs-logica\exercicio14.robot">
+<test id="s1-s1-t1" name="exercicio14" line="11">
 <if>
-<branch type="IF" condition="${NUMERO1}&gt;${NUMERO2}">
-<kw name="Log To Console" owner="BuiltIn">
-<arg>O número ${NUMERO1} é maior que o número ${NUMERO2}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" start="2024-02-06T20:05:32.021780" elapsed="0.000000"/>
+<branch type="IF" condition="${OPERACAO} == &quot;SOMA&quot;">
+<kw name="Evaluate" owner="BuiltIn">
+<var>${soma}</var>
+<arg>${NUMERO1} + ${NUMERO2}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" start="2024-02-06T20:16:27.292936" elapsed="0.000000"/>
 </kw>
-<status status="NOT RUN" start="2024-02-06T20:05:32.020269" elapsed="0.001511"/>
-</branch>
-<branch type="ELSE IF" condition="${NUMERO1}&lt;${NUMERO2}">
 <kw name="Log To Console" owner="BuiltIn">
-<arg>O número ${NUMERO2} é maior que o número ${NUMERO1}</arg>
+<arg>${NUMERO1} + ${NUMERO2} = ${soma}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" start="2024-02-06T20:05:32.022789" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-02-06T20:16:27.292936" elapsed="0.000000"/>
 </kw>
-<status status="NOT RUN" start="2024-02-06T20:05:32.021780" elapsed="0.001009"/>
+<status status="NOT RUN" start="2024-02-06T20:16:27.290941" elapsed="0.001995"/>
 </branch>
-<branch type="ELSE">
+<branch type="ELSE IF" condition="${OPERACAO} == &quot;MULT&quot;">
+<kw name="Evaluate" owner="BuiltIn">
+<var>${mult}</var>
+<arg>${NUMERO1} * ${NUMERO2}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" start="2024-02-06T20:16:27.293936" elapsed="0.000000"/>
+</kw>
 <kw name="Log To Console" owner="BuiltIn">
-<arg>Os números são iguais.</arg>
+<arg>${NUMERO1} * ${NUMERO2} = ${mult}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-02-06T20:05:32.022789" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-02-06T20:16:27.293936" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2024-02-06T20:05:32.022789" elapsed="0.000997"/>
+<status status="NOT RUN" start="2024-02-06T20:16:27.293936" elapsed="0.000000"/>
 </branch>
-<status status="PASS" start="2024-02-06T20:05:32.020269" elapsed="0.003517"/>
+<branch type="ELSE IF" condition="${OPERACAO} == &quot;SUB&quot;">
+<kw name="Evaluate" owner="BuiltIn">
+<var>${sub}</var>
+<arg>${NUMERO1} - ${NUMERO2}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" start="2024-02-06T20:16:27.295386" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${NUMERO1} - ${NUMERO2} = ${sub}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2024-02-06T20:16:27.295386" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-02-06T20:16:27.293936" elapsed="0.001450"/>
+</branch>
+<branch type="ELSE IF" condition="${OPERACAO} == &quot;DIV&quot;">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-02-06T20:16:27.295386" level="INFO">${div} = 0.6666666666666666</msg>
+<var>${div}</var>
+<arg>${NUMERO1} / ${NUMERO2}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-02-06T20:16:27.295386" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${NUMERO1} / ${NUMERO2} = ${div}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-02-06T20:16:27.295386" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-02-06T20:16:27.295386" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2024-02-06T20:16:27.290941" elapsed="0.004445"/>
 </if>
-<status status="PASS" start="2024-02-06T20:05:32.016268" elapsed="0.007518"/>
+<status status="PASS" start="2024-02-06T20:16:27.286267" elapsed="0.009119"/>
 </test>
-<status status="PASS" start="2024-02-06T20:05:32.010741" elapsed="0.015047"/>
+<status status="PASS" start="2024-02-06T20:16:27.279268" elapsed="0.016118"/>
 </suite>
-<status status="PASS" start="2024-02-06T20:05:31.882454" elapsed="0.145843"/>
+<status status="PASS" start="2024-02-06T20:16:27.248100" elapsed="0.047286"/>
 </suite>
 <statistics>
 <total>
@@ -44,7 +77,7 @@
 </tag>
 <suite>
 <stat pass="1" fail="0" skip="0" id="s1" name="Iqs-Logica">Iqs-Logica</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1" name="Exercicio21">Iqs-Logica.Exercicio21</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Exercicio14">Iqs-Logica.Exercicio14</stat>
 </suite>
 </statistics>
 <errors>
