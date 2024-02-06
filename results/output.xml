@@ -1,37 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.11.1 on win32)" generated="2024-02-06T18:25:58.766843" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.11.1 on win32)" generated="2024-02-06T18:30:39.554650" rpa="false" schemaversion="5">
 <suite id="s1" name="Iqs-Logica" source="C:\Users\silviaz\OneDrive\Documentos\iqs-logica">
-<suite id="s1-s1" name="Exercicio8" source="C:\Users\silviaz\OneDrive\Documentos\iqs-logica\exercicio8.robot">
-<test id="s1-s1-t1" name="exercicio8" line="12">
+<suite id="s1-s1" name="Exercicio9" source="C:\Users\silviaz\OneDrive\Documentos\iqs-logica\exercicio9.robot">
+<test id="s1-s1-t1" name="exercicio9" line="9">
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2024-02-06T18:25:58.855434" level="INFO">${area} = 360</msg>
-<var>${area}</var>
-<arg>${LARGURA}*${COMPRIMENTO}</arg>
+<msg time="2024-02-06T18:30:39.600662" level="INFO">${consumo_medio} = 2.5</msg>
+<var>${consumo_medio}</var>
+<arg>${COMBUSTIVEL}/${DISTANCIA}</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2024-02-06T18:25:58.855434" elapsed="0.003516"/>
-</kw>
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2024-02-06T18:25:58.866989" level="INFO">${preco} = 360000</msg>
-<var>${preco}</var>
-<arg>${area}*${PRECO_METRO_QUAD}</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2024-02-06T18:25:58.866989" elapsed="0.001081"/>
+<status status="PASS" start="2024-02-06T18:30:39.600662" elapsed="0.001000"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
-<arg>Área: ${area}</arg>
+<arg>Consumo médio: ${consumo_medio} reais/litro</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-02-06T18:25:58.870088" elapsed="0.000000"/>
+<status status="PASS" start="2024-02-06T18:30:39.602665" elapsed="0.000000"/>
 </kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>Preço: ${preco}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-02-06T18:25:58.871549" elapsed="0.001413"/>
-</kw>
-<status status="PASS" start="2024-02-06T18:25:58.852432" elapsed="0.020530"/>
+<status status="PASS" start="2024-02-06T18:30:39.599663" elapsed="0.004000"/>
 </test>
-<status status="PASS" start="2024-02-06T18:25:58.832649" elapsed="0.056433"/>
+<status status="PASS" start="2024-02-06T18:30:39.593817" elapsed="0.011887"/>
 </suite>
-<status status="PASS" start="2024-02-06T18:25:58.772364" elapsed="0.131238"/>
+<status status="PASS" start="2024-02-06T18:30:39.559259" elapsed="0.049531"/>
 </suite>
 <statistics>
 <total>
@@ -41,7 +29,7 @@
 </tag>
 <suite>
 <stat pass="1" fail="0" skip="0" id="s1" name="Iqs-Logica">Iqs-Logica</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1" name="Exercicio8">Iqs-Logica.Exercicio8</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Exercicio9">Iqs-Logica.Exercicio9</stat>
 </suite>
 </statistics>
 <errors>
