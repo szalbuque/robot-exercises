@@ -1,49 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.11.1 on win32)" generated="2024-02-06T19:57:08.032845" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.11.1 on win32)" generated="2024-02-06T20:05:31.873264" rpa="false" schemaversion="5">
 <suite id="s1" name="Iqs-Logica" source="C:\Users\silviaz\OneDrive\Documentos\iqs-logica">
-<suite id="s1-s1" name="Exercicio12" source="C:\Users\silviaz\OneDrive\Documentos\iqs-logica\exercicio12.robot">
-<test id="s1-s1-t1" name="exercicio3" line="11">
-<kw name="Log To Console" owner="BuiltIn">
-<arg>Média das notas da ${NOME} em ${DISCIPLINA}:</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-02-06T19:57:08.092384" elapsed="0.003084"/>
-</kw>
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2024-02-06T19:57:08.100469" level="INFO">${media} = 8.5</msg>
-<var>${media}</var>
-<arg>(${NOTAS}[0]+${NOTAS}[1]+${NOTAS}[2]+${NOTAS}[3])/4</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2024-02-06T19:57:08.097472" elapsed="0.002997"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${media}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-02-06T19:57:08.101976" elapsed="0.001026"/>
-</kw>
+<suite id="s1-s1" name="Exercicio21" source="C:\Users\silviaz\OneDrive\Documentos\iqs-logica\exercicio21.robot">
+<test id="s1-s1-t1" name="exercicio21" line="11">
 <if>
-<branch type="IF" condition="${media}&gt;7">
+<branch type="IF" condition="${NUMERO1}&gt;${NUMERO2}">
 <kw name="Log To Console" owner="BuiltIn">
-<arg>Aprovado</arg>
+<arg>O número ${NUMERO1} é maior que o número ${NUMERO2}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-02-06T19:57:08.104002" elapsed="0.001001"/>
+<status status="NOT RUN" start="2024-02-06T20:05:32.021780" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2024-02-06T19:57:08.103002" elapsed="0.002001"/>
+<status status="NOT RUN" start="2024-02-06T20:05:32.020269" elapsed="0.001511"/>
+</branch>
+<branch type="ELSE IF" condition="${NUMERO1}&lt;${NUMERO2}">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>O número ${NUMERO2} é maior que o número ${NUMERO1}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2024-02-06T20:05:32.022789" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-02-06T20:05:32.021780" elapsed="0.001009"/>
 </branch>
 <branch type="ELSE">
 <kw name="Log To Console" owner="BuiltIn">
-<arg>Reprovado</arg>
+<arg>Os números são iguais.</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" start="2024-02-06T19:57:08.105003" elapsed="0.000000"/>
+<status status="PASS" start="2024-02-06T20:05:32.022789" elapsed="0.000000"/>
 </kw>
-<status status="NOT RUN" start="2024-02-06T19:57:08.105003" elapsed="0.000000"/>
+<status status="PASS" start="2024-02-06T20:05:32.022789" elapsed="0.000997"/>
 </branch>
-<status status="PASS" start="2024-02-06T19:57:08.103002" elapsed="0.005003"/>
+<status status="PASS" start="2024-02-06T20:05:32.020269" elapsed="0.003517"/>
 </if>
-<status status="PASS" start="2024-02-06T19:57:08.087876" elapsed="0.026197"/>
+<status status="PASS" start="2024-02-06T20:05:32.016268" elapsed="0.007518"/>
 </test>
-<status status="PASS" start="2024-02-06T19:57:08.082876" elapsed="0.038204"/>
+<status status="PASS" start="2024-02-06T20:05:32.010741" elapsed="0.015047"/>
 </suite>
-<status status="PASS" start="2024-02-06T19:57:08.038116" elapsed="0.089941"/>
+<status status="PASS" start="2024-02-06T20:05:31.882454" elapsed="0.145843"/>
 </suite>
 <statistics>
 <total>
@@ -53,7 +44,7 @@
 </tag>
 <suite>
 <stat pass="1" fail="0" skip="0" id="s1" name="Iqs-Logica">Iqs-Logica</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1" name="Exercicio12">Iqs-Logica.Exercicio12</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Exercicio21">Iqs-Logica.Exercicio21</stat>
 </suite>
 </statistics>
 <errors>
