@@ -1,60 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.11.1 on win32)" generated="2024-02-06T19:32:12.748959" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.11.1 on win32)" generated="2024-02-06T19:40:17.623958" rpa="false" schemaversion="5">
 <suite id="s1" name="Iqs-Logica" source="C:\Users\silviaz\OneDrive\Documentos\iqs-logica">
-<suite id="s1-s1" name="Exercicio10" source="C:\Users\silviaz\OneDrive\Documentos\iqs-logica\exercicio10.robot">
-<test id="s1-s1-t1" name="exercicio10" line="9">
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2024-02-06T19:32:12.798515" level="INFO">${tot_minutos} = 120.0</msg>
-<var>${tot_minutos}</var>
-<arg>${SEGUNDOS}/60</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2024-02-06T19:32:12.797512" elapsed="0.002004"/>
-</kw>
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2024-02-06T19:32:12.802514" level="INFO">${tot_horas} = 2.0</msg>
-<var>${tot_horas}</var>
-<arg>${tot_minutos}/60</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2024-02-06T19:32:12.801514" elapsed="0.004519"/>
-</kw>
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2024-02-06T19:32:12.807041" level="INFO">${horas} = 2</msg>
-<var>${horas}</var>
-<arg>int(${tot_horas})</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2024-02-06T19:32:12.806033" elapsed="0.001008"/>
-</kw>
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2024-02-06T19:32:12.808042" level="INFO">${minutosdecimais} = 0.0</msg>
-<var>${minutosdecimais}</var>
-<arg>((${tot_horas}-${horas})*60)</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2024-02-06T19:32:12.808042" elapsed="0.001000"/>
-</kw>
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2024-02-06T19:32:12.810042" level="INFO">${minutos} = 0</msg>
-<var>${minutos}</var>
-<arg>int(${minutosdecimais})</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2024-02-06T19:32:12.809042" elapsed="0.001000"/>
-</kw>
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2024-02-06T19:32:12.811041" level="INFO">${segundos} = 0</msg>
-<var>${segundos}</var>
-<arg>int(((${minutosdecimais}-${minutos})*60))</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2024-02-06T19:32:12.810042" elapsed="0.000999"/>
-</kw>
+<suite id="s1-s1" name="Exercicio11" source="C:\Users\silviaz\OneDrive\Documentos\iqs-logica\exercicio11.robot">
+<test id="s1-s1-t1" name="exercicio11" line="8">
+<if>
+<branch type="IF" condition="${NUMERO}==0">
 <kw name="Log To Console" owner="BuiltIn">
-<arg>${horas} : ${minutos} : ${segundos}</arg>
+<arg>Zero</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-02-06T19:32:12.812042" elapsed="0.001000"/>
+<status status="NOT RUN" start="2024-02-06T19:40:17.678491" elapsed="0.001008"/>
 </kw>
-<status status="PASS" start="2024-02-06T19:32:12.796513" elapsed="0.016529"/>
+<status status="NOT RUN" start="2024-02-06T19:40:17.678491" elapsed="0.001008"/>
+</branch>
+<branch type="ELSE IF" condition="${NUMERO}&lt;0">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Negativo</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-02-06T19:40:17.679499" elapsed="0.001000"/>
+</kw>
+<status status="PASS" start="2024-02-06T19:40:17.679499" elapsed="0.001000"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Positivo</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2024-02-06T19:40:17.680499" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-02-06T19:40:17.680499" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2024-02-06T19:40:17.678491" elapsed="0.002008"/>
+</if>
+<status status="PASS" start="2024-02-06T19:40:17.677206" elapsed="0.003293"/>
 </test>
-<status status="PASS" start="2024-02-06T19:32:12.787916" elapsed="0.027423"/>
+<status status="PASS" start="2024-02-06T19:40:17.672351" elapsed="0.014912"/>
 </suite>
-<status status="PASS" start="2024-02-06T19:32:12.754465" elapsed="0.063883"/>
+<status status="PASS" start="2024-02-06T19:40:17.631248" elapsed="0.058024"/>
 </suite>
 <statistics>
 <total>
@@ -64,7 +44,7 @@
 </tag>
 <suite>
 <stat pass="1" fail="0" skip="0" id="s1" name="Iqs-Logica">Iqs-Logica</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1" name="Exercicio10">Iqs-Logica.Exercicio10</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Exercicio11">Iqs-Logica.Exercicio11</stat>
 </suite>
 </statistics>
 <errors>
