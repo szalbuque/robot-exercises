@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.11.1 on win32)" generated="2024-02-07T14:33:22.687866" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.11.1 on win32)" generated="2024-02-07T14:55:54.429984" rpa="false" schemaversion="5">
 <suite id="s1" name="Iqs-Logica" source="C:\Users\silviaz\OneDrive\Documentos\iqs-logica">
 <suite id="s1-s1" name="Aulaselenium" source="C:\Users\silviaz\OneDrive\Documentos\iqs-logica\aulaselenium.robot">
-<test id="s1-s1-t1" name="TC001 - Realizar login com usuário válido" line="39">
+<test id="s1-s1-t1" name="TC002 - Realizar login com usuário bloqueado" line="50">
 <kw name="Run Keywords" owner="BuiltIn" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-02-07T14:33:22.991260" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/v1/'.</msg>
+<msg time="2024-02-07T14:55:54.781584" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/v1/'.</msg>
 <arg>url=${URL}</arg>
 <arg>browser=${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-02-07T14:33:22.990259" elapsed="3.601878"/>
+<status status="PASS" start="2024-02-07T14:55:54.780562" elapsed="2.715721"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-02-07T14:33:26.596656" elapsed="0.325282"/>
+<status status="PASS" start="2024-02-07T14:55:57.497285" elapsed="0.213273"/>
 </kw>
 <arg>Open Browser</arg>
 <arg>url=${URL}</arg>
@@ -21,62 +21,40 @@
 <arg>AND</arg>
 <arg>SeleniumLibrary.Maximize Browser Window</arg>
 <doc>Executes all the given keywords in a sequence.</doc>
-<status status="PASS" start="2024-02-07T14:33:22.989292" elapsed="3.933654"/>
+<status status="PASS" start="2024-02-07T14:55:54.780562" elapsed="2.929996"/>
 </kw>
-<kw name="Realizar login com ${USUARIO_VALIDO} e ${SENHA_VALIDA}" source_name="Realizar login com ${username} e ${password}">
+<kw name="Realizar login com ${USUARIO_BLOQUEADO} e ${SENHA_VALIDA}" source_name="Realizar login com ${username} e ${password}">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-02-07T14:33:26.928493" level="INFO">Typing text 'standard_user' into text field 'id:user-name'.</msg>
+<msg time="2024-02-07T14:55:57.713567" level="INFO">Typing text 'locked_out_user' into text field 'id:user-name'.</msg>
 <arg>${LOGIN_PAGE.UsernameInput}</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-07T14:33:26.927493" elapsed="0.212636"/>
+<status status="PASS" start="2024-02-07T14:55:57.712564" elapsed="0.192398"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-02-07T14:33:27.145679" level="INFO">Typing text 'secret_sauce' into text field 'xpath://input[@name='password']'.</msg>
+<msg time="2024-02-07T14:55:57.905970" level="INFO">Typing text 'secret_sauce' into text field 'xpath://input[@name='password']'.</msg>
 <arg>${LOGIN_PAGE.PasswordInput}</arg>
 <arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-07T14:33:27.141143" elapsed="0.115428"/>
+<status status="PASS" start="2024-02-07T14:55:57.904962" elapsed="0.137160"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-02-07T14:33:27.257974" level="INFO">Clicking element 'css:[class=btn_action]'.</msg>
+<msg time="2024-02-07T14:55:58.043632" level="INFO">Clicking element 'css:[class=btn_action]'.</msg>
 <arg>${LOGIN_PAGE.LoginButton}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-07T14:33:27.256571" elapsed="0.622762"/>
+<status status="PASS" start="2024-02-07T14:55:58.042122" elapsed="0.104935"/>
 </kw>
-<status status="PASS" start="2024-02-07T14:33:26.925488" elapsed="0.954846"/>
-</kw>
-<kw name="Validar que o login foi feito com sucesso">
-<kw name="Get Location" owner="SeleniumLibrary">
-<msg time="2024-02-07T14:33:28.019912" level="INFO">${url} = https://www.saucedemo.com/v1/inventory.html</msg>
-<var>${url}</var>
-<doc>Returns the current browser window URL.</doc>
-<status status="PASS" start="2024-02-07T14:33:27.887841" elapsed="0.133071"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-02-07T14:33:28.021918" level="INFO">${first} = https://www.saucedemo.com/v1/inventory.html</msg>
-<var>${first}</var>
-<arg>https://www.saucedemo.com/v1/inventory.html</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-02-07T14:33:28.020912" elapsed="0.002001"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${first}</arg>
-<arg>${url}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-02-07T14:33:28.024251" elapsed="0.001011"/>
-</kw>
-<status status="PASS" start="2024-02-07T14:33:27.886840" elapsed="0.138422"/>
+<status status="PASS" start="2024-02-07T14:55:57.711565" elapsed="0.436506"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-02-07T14:33:28.036795" elapsed="2.995365"/>
+<status status="PASS" start="2024-02-07T14:55:58.148071" elapsed="2.382293"/>
 </kw>
-<status status="PASS" start="2024-02-07T14:33:22.986257" elapsed="8.065552"/>
+<status status="PASS" start="2024-02-07T14:55:54.777555" elapsed="5.752809"/>
 </test>
-<status status="PASS" start="2024-02-07T14:33:22.757549" elapsed="8.303971"/>
+<status status="PASS" start="2024-02-07T14:55:54.491794" elapsed="6.043511"/>
 </suite>
-<status status="PASS" start="2024-02-07T14:33:22.695547" elapsed="8.371247"/>
+<status status="PASS" start="2024-02-07T14:55:54.443522" elapsed="6.094795"/>
 </suite>
 <statistics>
 <total>
