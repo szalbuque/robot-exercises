@@ -1,44 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.11.1 on win32)" generated="2024-02-07T13:16:34.894028" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.11.1 on win32)" generated="2024-02-07T13:23:03.190240" rpa="false" schemaversion="5">
 <suite id="s1" name="Iqs-Logica" source="C:\Users\silviaz\OneDrive\Documentos\iqs-logica">
 <suite id="s1-s1" name="Aulaselenium" source="C:\Users\silviaz\OneDrive\Documentos\iqs-logica\aulaselenium.robot">
 <test id="s1-s1-t1" name="TC001 - Realizar login com usuário válido" line="11">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-02-07T13:16:35.252139" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/v1/'.</msg>
+<msg time="2024-02-07T13:23:03.567345" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/v1/'.</msg>
 <arg>url=${URL}</arg>
 <arg>browser=${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-02-07T13:16:35.251139" elapsed="5.523863"/>
+<status status="PASS" start="2024-02-07T13:23:03.565771" elapsed="2.605331"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-02-07T13:16:40.776001" elapsed="0.533797"/>
+<status status="PASS" start="2024-02-07T13:23:06.173100" elapsed="0.138843"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-02-07T13:16:41.311811" level="INFO">Typing text 'standard_user' into text field 'id:user-name'.</msg>
-<arg>id:user-name</arg>
+<msg time="2024-02-07T13:23:06.313145" level="INFO">Typing text 'standard_user' into text field 'xpath://input[@id='user-name']'.</msg>
+<arg>xpath://input[@id='user-name']</arg>
 <arg>standard_user</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-07T13:16:41.310804" elapsed="0.193088"/>
+<status status="PASS" start="2024-02-07T13:23:06.311943" elapsed="0.214227"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-02-07T13:16:41.505338" level="INFO">Typing text 'secret_sauce' into text field 'id:password'.</msg>
+<msg time="2024-02-07T13:23:06.528696" level="INFO">Typing text 'secret_sauce' into text field 'id:password'.</msg>
 <arg>id:password</arg>
 <arg>secret_sauce</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-07T13:16:41.505338" elapsed="0.119982"/>
+<status status="PASS" start="2024-02-07T13:23:06.527686" elapsed="0.122970"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-02-07T13:16:41.626319" level="INFO">Clicking element 'id:login-button'.</msg>
+<msg time="2024-02-07T13:23:06.651662" level="INFO">Clicking element 'id:login-button'.</msg>
 <arg>id:login-button</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-07T13:16:41.626319" elapsed="0.818809"/>
+<status status="PASS" start="2024-02-07T13:23:06.651662" elapsed="0.609458"/>
 </kw>
-<status status="PASS" start="2024-02-07T13:16:35.249132" elapsed="7.211412"/>
+<status status="PASS" start="2024-02-07T13:23:03.563772" elapsed="3.697348"/>
 </test>
-<status status="PASS" start="2024-02-07T13:16:34.952184" elapsed="7.510369"/>
+<status status="PASS" start="2024-02-07T13:23:03.278930" elapsed="3.985191"/>
 </suite>
-<status status="PASS" start="2024-02-07T13:16:34.901089" elapsed="7.564466"/>
+<status status="PASS" start="2024-02-07T13:23:03.196239" elapsed="4.074446"/>
 </suite>
 <statistics>
 <total>
