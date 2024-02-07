@@ -7,6 +7,7 @@ ${URL}    https://www.saucedemo.com/v1/
 ${BROWSER}    chrome
 ${USUARIO_VALIDO}    standard_user
 ${SENHA_VALIDA}    secret_sauce
+${USUARIO_INVALIDO}    wrong_user
 
 # Page Object Model (POM)
 &{LOGIN_PAGE}
@@ -28,3 +29,8 @@ TC001 - Realizar login com usuário válido
     Open Browser    url=${URL}	browser=${BROWSER}
     Maximize Browser Window
     Realizar login com ${USUARIO_VALIDO} e ${SENHA_VALIDA}
+
+TC002 - Realizar login com usuário inválido
+    Open Browser    url=${URL}	browser=${BROWSER}
+    Maximize Browser Window
+    Realizar login com ${USUARIO_INVALIDO} e ${SENHA_VALIDA}
