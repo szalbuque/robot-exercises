@@ -23,6 +23,10 @@ ${USUARIO_BLOQUEADO}    locked_out_user
 ...    LoginButton=css:[class=btn_action]
 ...    ErrorMsg=xpath://h3
 
+&{INVENTORY_PAGE}
+...    BurgerMenuButton=//div[@class='bm-burger-button']//button
+...    LinkLogout=id:logout_sidebar_link
+
 *** Keywords ***
 
 ### Ações ###
@@ -42,6 +46,16 @@ Validar que o login não foi feito com usuário bloqueado
     ${msg-esperada}=    Set Variable    Sorry, this user has been locked out.
     Should Contain    ${msg-erro}    ${msg-esperada}
 
+Realizar logout
+    Click Element    ${INVENTORY_PAGE.BurgerMenuButton}
+    Wait Until Element Is Visible    locator=${INVENTORY_PAGE.LinkLogout}
+    Click Element    ${INVENTORY_PAGE.LinkLogout}
+
+Validar logout
+    ${url}=    Get Location
+    ${home}=    Set Variable    https://www.saucedemo.com/v1/index.html
+    Should Be Equal    ${url}    ${home}
+
 *** Test Cases ***
 TC001 - Realizar login com usuário válido
     Realizar login com ${USUARIO_VALIDO} e ${SENHA_VALIDA}
@@ -49,3 +63,8 @@ TC001 - Realizar login com usuário válido
 
 TC002 - Realizar login com usuário bloqueado
     Realizar login com ${USUARIO_BLOQUEADO} e ${SENHA_VALIDA}
+
+TC003 - Realizar logout
+    Realizar login com ${USUARIO_VALIDO} e ${SENHA_VALIDA}
+    Realizar logout
+    Validar logout
