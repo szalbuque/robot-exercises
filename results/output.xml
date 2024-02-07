@@ -1,94 +1,92 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.11.1 on win32)" generated="2024-02-07T14:05:50.185542" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.11.1 on win32)" generated="2024-02-07T14:33:22.687866" rpa="false" schemaversion="5">
 <suite id="s1" name="Iqs-Logica" source="C:\Users\silviaz\OneDrive\Documentos\iqs-logica">
 <suite id="s1-s1" name="Aulaselenium" source="C:\Users\silviaz\OneDrive\Documentos\iqs-logica\aulaselenium.robot">
-<test id="s1-s1-t1" name="TC001 - Realizar login com usuário válido" line="28">
+<test id="s1-s1-t1" name="TC001 - Realizar login com usuário válido" line="39">
+<kw name="Run Keywords" owner="BuiltIn" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-02-07T14:05:50.488598" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/v1/'.</msg>
+<msg time="2024-02-07T14:33:22.991260" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/v1/'.</msg>
 <arg>url=${URL}</arg>
 <arg>browser=${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-02-07T14:05:50.487597" elapsed="3.137974"/>
+<status status="PASS" start="2024-02-07T14:33:22.990259" elapsed="3.601878"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-02-07T14:05:53.628112" elapsed="0.164451"/>
+<status status="PASS" start="2024-02-07T14:33:26.596656" elapsed="0.325282"/>
+</kw>
+<arg>Open Browser</arg>
+<arg>url=${URL}</arg>
+<arg>browser=${BROWSER}</arg>
+<arg>AND</arg>
+<arg>SeleniumLibrary.Maximize Browser Window</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<status status="PASS" start="2024-02-07T14:33:22.989292" elapsed="3.933654"/>
 </kw>
 <kw name="Realizar login com ${USUARIO_VALIDO} e ${SENHA_VALIDA}" source_name="Realizar login com ${username} e ${password}">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-02-07T14:05:53.798127" level="INFO">Typing text 'standard_user' into text field 'id:user-name'.</msg>
+<msg time="2024-02-07T14:33:26.928493" level="INFO">Typing text 'standard_user' into text field 'id:user-name'.</msg>
 <arg>${LOGIN_PAGE.UsernameInput}</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-07T14:05:53.797098" elapsed="0.211310"/>
+<status status="PASS" start="2024-02-07T14:33:26.927493" elapsed="0.212636"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-02-07T14:05:54.009904" level="INFO">Typing text 'secret_sauce' into text field 'xpath://input[@name='password']'.</msg>
+<msg time="2024-02-07T14:33:27.145679" level="INFO">Typing text 'secret_sauce' into text field 'xpath://input[@name='password']'.</msg>
 <arg>${LOGIN_PAGE.PasswordInput}</arg>
 <arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-07T14:05:54.008408" elapsed="0.110327"/>
+<status status="PASS" start="2024-02-07T14:33:27.141143" elapsed="0.115428"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-02-07T14:05:54.119743" level="INFO">Clicking element 'css:[class=btn_action]'.</msg>
+<msg time="2024-02-07T14:33:27.257974" level="INFO">Clicking element 'css:[class=btn_action]'.</msg>
 <arg>${LOGIN_PAGE.LoginButton}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-07T14:05:54.118735" elapsed="0.546021"/>
+<status status="PASS" start="2024-02-07T14:33:27.256571" elapsed="0.622762"/>
 </kw>
-<status status="PASS" start="2024-02-07T14:05:53.796085" elapsed="0.868671"/>
+<status status="PASS" start="2024-02-07T14:33:26.925488" elapsed="0.954846"/>
 </kw>
-<status status="PASS" start="2024-02-07T14:05:50.485586" elapsed="4.226775"/>
+<kw name="Validar que o login foi feito com sucesso">
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2024-02-07T14:33:28.019912" level="INFO">${url} = https://www.saucedemo.com/v1/inventory.html</msg>
+<var>${url}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2024-02-07T14:33:27.887841" elapsed="0.133071"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-02-07T14:33:28.021918" level="INFO">${first} = https://www.saucedemo.com/v1/inventory.html</msg>
+<var>${first}</var>
+<arg>https://www.saucedemo.com/v1/inventory.html</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-02-07T14:33:28.020912" elapsed="0.002001"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${first}</arg>
+<arg>${url}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-02-07T14:33:28.024251" elapsed="0.001011"/>
+</kw>
+<status status="PASS" start="2024-02-07T14:33:27.886840" elapsed="0.138422"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-02-07T14:33:28.036795" elapsed="2.995365"/>
+</kw>
+<status status="PASS" start="2024-02-07T14:33:22.986257" elapsed="8.065552"/>
 </test>
-<test id="s1-s1-t2" name="TC002 - Realizar login com usuário inválido" line="33">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-02-07T14:05:54.719969" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/v1/'.</msg>
-<arg>url=${URL}</arg>
-<arg>browser=${BROWSER}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-02-07T14:05:54.718970" elapsed="2.364015"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-02-07T14:05:57.096190" elapsed="0.141604"/>
-</kw>
-<kw name="Realizar login com ${USUARIO_INVALIDO} e ${SENHA_VALIDA}" source_name="Realizar login com ${username} e ${password}">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-02-07T14:05:57.242800" level="INFO">Typing text 'wrong_user' into text field 'id:user-name'.</msg>
-<arg>${LOGIN_PAGE.UsernameInput}</arg>
-<arg>${username}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-07T14:05:57.242800" elapsed="0.204728"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-02-07T14:05:57.449634" level="INFO">Typing text 'secret_sauce' into text field 'xpath://input[@name='password']'.</msg>
-<arg>${LOGIN_PAGE.PasswordInput}</arg>
-<arg>${password}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-07T14:05:57.448624" elapsed="0.133097"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-02-07T14:05:57.582974" level="INFO">Clicking element 'css:[class=btn_action]'.</msg>
-<arg>${LOGIN_PAGE.LoginButton}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-07T14:05:57.581721" elapsed="0.085012"/>
-</kw>
-<status status="PASS" start="2024-02-07T14:05:57.241803" elapsed="0.426141"/>
-</kw>
-<status status="PASS" start="2024-02-07T14:05:54.717962" elapsed="2.949982"/>
-</test>
-<status status="PASS" start="2024-02-07T14:05:50.231835" elapsed="7.443801"/>
+<status status="PASS" start="2024-02-07T14:33:22.757549" elapsed="8.303971"/>
 </suite>
-<status status="PASS" start="2024-02-07T14:05:50.192627" elapsed="7.484138"/>
+<status status="PASS" start="2024-02-07T14:33:22.695547" elapsed="8.371247"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="0" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="2" fail="0" skip="0" id="s1" name="Iqs-Logica">Iqs-Logica</stat>
-<stat pass="2" fail="0" skip="0" id="s1-s1" name="Aulaselenium">Iqs-Logica.Aulaselenium</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Iqs-Logica">Iqs-Logica</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Aulaselenium">Iqs-Logica.Aulaselenium</stat>
 </suite>
 </statistics>
 <errors>

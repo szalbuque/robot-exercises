@@ -1,6 +1,12 @@
 *** Settings ***
 Library    SeleniumLibrary
 
+Test Setup  Run Keywords
+...    Open Browser    url=${URL}    browser=${BROWSER}     AND
+...    SeleniumLibrary.Maximize Browser Window
+
+Test Teardown    Close Browser
+
 *** Variables ***
 # Dados de configuração
 ${URL}    https://www.saucedemo.com/v1/
@@ -24,13 +30,15 @@ Realizar login com ${username} e ${password}
     Input Text    ${LOGIN_PAGE.PasswordInput}    ${password}
     Click Element    ${LOGIN_PAGE.LoginButton}
 
+Validar que o login foi feito com sucesso
+    ${url}=    Get Location
+    ${first}=    Set Variable    https://www.saucedemo.com/v1/inventory.html
+    Should Be Equal    ${first}    ${url}
+
 *** Test Cases ***
 TC001 - Realizar login com usuário válido
-    Open Browser    url=${URL}	browser=${BROWSER}
-    Maximize Browser Window
     Realizar login com ${USUARIO_VALIDO} e ${SENHA_VALIDA}
+    Validar que o login foi feito com sucesso
 
 TC002 - Realizar login com usuário inválido
-    Open Browser    url=${URL}	browser=${BROWSER}
-    Maximize Browser Window
     Realizar login com ${USUARIO_INVALIDO} e ${SENHA_VALIDA}
