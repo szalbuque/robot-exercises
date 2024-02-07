@@ -1,47 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.11.1 on win32)" generated="2024-02-07T13:55:39.936483" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.11.1 on win32)" generated="2024-02-07T14:03:52.400685" rpa="false" schemaversion="5">
 <suite id="s1" name="Iqs-Logica" source="C:\Users\silviaz\OneDrive\Documentos\iqs-logica">
 <suite id="s1-s1" name="Aulaselenium" source="C:\Users\silviaz\OneDrive\Documentos\iqs-logica\aulaselenium.robot">
-<test id="s1-s1-t1" name="TC001 - Realizar login com usuário válido" line="22">
+<test id="s1-s1-t1" name="TC001 - Realizar login com usuário válido" line="27">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-02-07T13:55:40.347923" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/v1/'.</msg>
+<msg time="2024-02-07T14:03:52.698858" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/v1/'.</msg>
 <arg>url=${URL}</arg>
 <arg>browser=${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-02-07T13:55:40.345913" elapsed="2.929995"/>
+<status status="PASS" start="2024-02-07T14:03:52.697851" elapsed="3.270490"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-02-07T13:55:43.277123" elapsed="0.135002"/>
+<status status="PASS" start="2024-02-07T14:03:55.980888" elapsed="0.170214"/>
 </kw>
-<kw name="Realizar login">
+<kw name="Realizar login com ${USUARIO_VALIDO} e ${SENHA_VALIDA}" source_name="Realizar login com ${username} e ${password}">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-02-07T13:55:43.414143" level="INFO">Typing text 'standard_user' into text field 'id:user-name'.</msg>
+<msg time="2024-02-07T14:03:56.166315" level="INFO">Typing text 'standard_user' into text field 'id:user-name'.</msg>
 <arg>${LOGIN_PAGE.UsernameInput}</arg>
-<arg>standard_user</arg>
+<arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-07T13:55:43.413142" elapsed="0.230803"/>
+<status status="PASS" start="2024-02-07T14:03:56.153259" elapsed="0.282490"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-02-07T13:55:43.646454" level="INFO">Typing text 'secret_sauce' into text field 'xpath://input[@name='password']'.</msg>
+<msg time="2024-02-07T14:03:56.437757" level="INFO">Typing text 'secret_sauce' into text field 'xpath://input[@name='password']'.</msg>
 <arg>${LOGIN_PAGE.PasswordInput}</arg>
-<arg>secret_sauce</arg>
+<arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-07T13:55:43.644947" elapsed="0.129016"/>
+<status status="PASS" start="2024-02-07T14:03:56.435749" elapsed="0.132829"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-02-07T13:55:43.776465" level="INFO">Clicking element 'css:[class=btn_action]'.</msg>
+<msg time="2024-02-07T14:03:56.569922" level="INFO">Clicking element 'css:[class=btn_action]'.</msg>
 <arg>${LOGIN_PAGE.LoginButton}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-07T13:55:43.773963" elapsed="0.708132"/>
+<status status="PASS" start="2024-02-07T14:03:56.568578" elapsed="0.603028"/>
 </kw>
-<status status="PASS" start="2024-02-07T13:55:43.412125" elapsed="1.069970"/>
+<status status="PASS" start="2024-02-07T14:03:56.152102" elapsed="1.020503"/>
 </kw>
-<status status="PASS" start="2024-02-07T13:55:40.343402" elapsed="4.150211"/>
+<status status="PASS" start="2024-02-07T14:03:52.695765" elapsed="4.581056"/>
 </test>
-<status status="PASS" start="2024-02-07T13:55:39.993684" elapsed="4.509449"/>
+<status status="PASS" start="2024-02-07T14:03:52.463807" elapsed="4.919023"/>
 </suite>
-<status status="PASS" start="2024-02-07T13:55:39.942999" elapsed="4.586745"/>
+<status status="PASS" start="2024-02-07T14:03:52.437145" elapsed="5.004338"/>
 </suite>
 <statistics>
 <total>
