@@ -1,73 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.11.1 on win32)" generated="2024-02-06T20:16:27.244106" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.11.1 on win32)" generated="2024-02-07T11:51:41.484478" rpa="false" schemaversion="5">
 <suite id="s1" name="Iqs-Logica" source="C:\Users\silviaz\OneDrive\Documentos\iqs-logica">
-<suite id="s1-s1" name="Exercicio14" source="C:\Users\silviaz\OneDrive\Documentos\iqs-logica\exercicio14.robot">
-<test id="s1-s1-t1" name="exercicio14" line="11">
-<if>
-<branch type="IF" condition="${OPERACAO} == &quot;SOMA&quot;">
-<kw name="Evaluate" owner="BuiltIn">
-<var>${soma}</var>
-<arg>${NUMERO1} + ${NUMERO2}</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="NOT RUN" start="2024-02-06T20:16:27.292936" elapsed="0.000000"/>
+<suite id="s1-s1" name="Aulaselenium" source="C:\Users\silviaz\OneDrive\Documentos\iqs-logica\aulaselenium.robot">
+<test id="s1-s1-t1" name="TC001 - Realizar login com usuário válido" line="9">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-02-07T11:51:41.896988" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/v1/'.</msg>
+<arg>url=https://www.saucedemo.com/v1/</arg>
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-02-07T11:51:41.895987" elapsed="3.084216"/>
 </kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${NUMERO1} + ${NUMERO2} = ${soma}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" start="2024-02-06T20:16:27.292936" elapsed="0.000000"/>
-</kw>
-<status status="NOT RUN" start="2024-02-06T20:16:27.290941" elapsed="0.001995"/>
-</branch>
-<branch type="ELSE IF" condition="${OPERACAO} == &quot;MULT&quot;">
-<kw name="Evaluate" owner="BuiltIn">
-<var>${mult}</var>
-<arg>${NUMERO1} * ${NUMERO2}</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="NOT RUN" start="2024-02-06T20:16:27.293936" elapsed="0.000000"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${NUMERO1} * ${NUMERO2} = ${mult}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" start="2024-02-06T20:16:27.293936" elapsed="0.000000"/>
-</kw>
-<status status="NOT RUN" start="2024-02-06T20:16:27.293936" elapsed="0.000000"/>
-</branch>
-<branch type="ELSE IF" condition="${OPERACAO} == &quot;SUB&quot;">
-<kw name="Evaluate" owner="BuiltIn">
-<var>${sub}</var>
-<arg>${NUMERO1} - ${NUMERO2}</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="NOT RUN" start="2024-02-06T20:16:27.295386" elapsed="0.000000"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${NUMERO1} - ${NUMERO2} = ${sub}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" start="2024-02-06T20:16:27.295386" elapsed="0.000000"/>
-</kw>
-<status status="NOT RUN" start="2024-02-06T20:16:27.293936" elapsed="0.001450"/>
-</branch>
-<branch type="ELSE IF" condition="${OPERACAO} == &quot;DIV&quot;">
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2024-02-06T20:16:27.295386" level="INFO">${div} = 0.6666666666666666</msg>
-<var>${div}</var>
-<arg>${NUMERO1} / ${NUMERO2}</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2024-02-06T20:16:27.295386" elapsed="0.000000"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${NUMERO1} / ${NUMERO2} = ${div}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-02-06T20:16:27.295386" elapsed="0.000000"/>
-</kw>
-<status status="PASS" start="2024-02-06T20:16:27.295386" elapsed="0.000000"/>
-</branch>
-<status status="PASS" start="2024-02-06T20:16:27.290941" elapsed="0.004445"/>
-</if>
-<status status="PASS" start="2024-02-06T20:16:27.286267" elapsed="0.009119"/>
+<status status="PASS" start="2024-02-07T11:51:41.892591" elapsed="3.090150"/>
 </test>
-<status status="PASS" start="2024-02-06T20:16:27.279268" elapsed="0.016118"/>
+<status status="PASS" start="2024-02-07T11:51:41.542874" elapsed="3.441873"/>
 </suite>
-<status status="PASS" start="2024-02-06T20:16:27.248100" elapsed="0.047286"/>
+<status status="PASS" start="2024-02-07T11:51:41.493301" elapsed="3.493453"/>
 </suite>
 <statistics>
 <total>
@@ -77,7 +24,7 @@
 </tag>
 <suite>
 <stat pass="1" fail="0" skip="0" id="s1" name="Iqs-Logica">Iqs-Logica</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1" name="Exercicio14">Iqs-Logica.Exercicio14</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Aulaselenium">Iqs-Logica.Aulaselenium</stat>
 </suite>
 </statistics>
 <errors>
