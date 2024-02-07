@@ -1,20 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.11.1 on win32)" generated="2024-02-07T12:29:18.680318" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.11.1 on win32)" generated="2024-02-07T12:40:39.246022" rpa="false" schemaversion="5">
 <suite id="s1" name="Iqs-Logica" source="C:\Users\silviaz\OneDrive\Documentos\iqs-logica">
 <suite id="s1-s1" name="Aulaselenium" source="C:\Users\silviaz\OneDrive\Documentos\iqs-logica\aulaselenium.robot">
 <test id="s1-s1-t1" name="TC001 - Realizar login com usuário válido" line="11">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-02-07T12:29:19.021457" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/v1/'.</msg>
+<msg time="2024-02-07T12:40:39.577453" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/v1/'.</msg>
 <arg>url=${URL}</arg>
 <arg>browser=${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-02-07T12:29:19.019941" elapsed="2.589991"/>
+<status status="PASS" start="2024-02-07T12:40:39.576452" elapsed="2.715298"/>
 </kw>
-<status status="PASS" start="2024-02-07T12:29:19.015939" elapsed="2.597760"/>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-02-07T12:40:42.292760" elapsed="0.219133"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-07T12:40:42.512903" level="INFO">Typing text 'teste' into text field 'id:user-name'.</msg>
+<arg>id:user-name</arg>
+<arg>teste</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-07T12:40:42.511893" elapsed="0.179127"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-07T12:40:42.692435" level="INFO">Clicking element 'id:login-button'.</msg>
+<arg>id:login-button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-07T12:40:42.691020" elapsed="0.079320"/>
+</kw>
+<status status="PASS" start="2024-02-07T12:40:39.574451" elapsed="3.200158"/>
 </test>
-<status status="PASS" start="2024-02-07T12:29:18.723321" elapsed="2.891591"/>
+<status status="PASS" start="2024-02-07T12:40:39.292674" elapsed="3.484484"/>
 </suite>
-<status status="PASS" start="2024-02-07T12:29:18.687859" elapsed="2.929467"/>
+<status status="PASS" start="2024-02-07T12:40:39.256063" elapsed="3.523613"/>
 </suite>
 <statistics>
 <total>

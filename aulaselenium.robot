@@ -10,3 +10,6 @@ ${BROWSER}    chrome
 *** Test Cases ***
 TC001 - Realizar login com usuário válido
     Open Browser    url=${URL}	browser=${BROWSER}
+    Maximize Browser Window
+    Input Text    id:user-name    teste
+    Click Element    id:login-button
