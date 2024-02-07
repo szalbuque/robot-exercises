@@ -13,13 +13,13 @@ ${BROWSER}    chrome
 ...    LoginButton=css:[class=btn_action]
 
 *** Keywords ***
+Realizar login
+    Input Text    ${LOGIN_PAGE.UsernameInput}    standard_user
+    Input Text    ${LOGIN_PAGE.PasswordInput}    secret_sauce
+    Click Element    ${LOGIN_PAGE.LoginButton}
 
 *** Test Cases ***
 TC001 - Realizar login com usuário válido
     Open Browser    url=${URL}	browser=${BROWSER}
     Maximize Browser Window
-    Wait Until Element Is Visible     locator=${LOGIN_PAGE.UsernameInput}
-    Click Element    ${LOGIN_PAGE.UsernameInput}
-    Input Text    ${LOGIN_PAGE.UsernameInput}    standard_user
-    Input Text    ${LOGIN_PAGE.PasswordInput}    secret_sauce
-    Click Element    ${LOGIN_PAGE.LoginButton}
+    Realizar login
