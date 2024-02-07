@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.11.1 on win32)" generated="2024-02-07T11:51:41.484478" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.11.1 on win32)" generated="2024-02-07T12:29:18.680318" rpa="false" schemaversion="5">
 <suite id="s1" name="Iqs-Logica" source="C:\Users\silviaz\OneDrive\Documentos\iqs-logica">
 <suite id="s1-s1" name="Aulaselenium" source="C:\Users\silviaz\OneDrive\Documentos\iqs-logica\aulaselenium.robot">
-<test id="s1-s1-t1" name="TC001 - Realizar login com usuário válido" line="9">
+<test id="s1-s1-t1" name="TC001 - Realizar login com usuário válido" line="11">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-02-07T11:51:41.896988" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/v1/'.</msg>
-<arg>url=https://www.saucedemo.com/v1/</arg>
-<arg>browser=chrome</arg>
+<msg time="2024-02-07T12:29:19.021457" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/v1/'.</msg>
+<arg>url=${URL}</arg>
+<arg>browser=${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-02-07T11:51:41.895987" elapsed="3.084216"/>
+<status status="PASS" start="2024-02-07T12:29:19.019941" elapsed="2.589991"/>
 </kw>
-<status status="PASS" start="2024-02-07T11:51:41.892591" elapsed="3.090150"/>
+<status status="PASS" start="2024-02-07T12:29:19.015939" elapsed="2.597760"/>
 </test>
-<status status="PASS" start="2024-02-07T11:51:41.542874" elapsed="3.441873"/>
+<status status="PASS" start="2024-02-07T12:29:18.723321" elapsed="2.891591"/>
 </suite>
-<status status="PASS" start="2024-02-07T11:51:41.493301" elapsed="3.493453"/>
+<status status="PASS" start="2024-02-07T12:29:18.687859" elapsed="2.929467"/>
 </suite>
 <statistics>
 <total>
